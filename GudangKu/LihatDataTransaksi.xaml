@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GudangKu.LihatDataTransaksi"
+             Title="Riwayat Transaksi">
+    <ContentPage.Content>
+        <StackLayout Margin="20,0,20,0">
+            <Label Text="Data Transaksi" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10" />
+            <ScrollView>
+                <CollectionView x:Name="collectionView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Nama Barang:" FontAttributes="Bold" />
+                                    <Label Text="{Binding NamaBarang}" Grid.Column="1" />
+                                </Grid>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Tipe Transaksi:" FontAttributes="Bold" />
+                                    <Label Text="{Binding Transaksi.transaction_type}" Grid.Column="1"/>
+                                </Grid>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Jumlah Barang:" FontAttributes="Bold" />
+                                    <Label Text="{Binding Transaksi.quantity}" Grid.Column="1"/>
+                                </Grid>
+                                <Button Text="Hapus" BackgroundColor="Salmon" Clicked="delete"/>
+                                <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,10" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

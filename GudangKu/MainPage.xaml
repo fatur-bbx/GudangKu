@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GudangKu.MainPage">
+
+    <StackLayout Spacing="10">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="GUDANGKU" HorizontalTextAlignment="Center" TextColor="White" FontAttributes="Bold" FontSize="25"/>
+        </Frame>
+        <StackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <Button Text="Gudang" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="200" HeightRequest="60" BackgroundColor="#4CAF50" TextColor="White" Clicked="OnGudangButtonClicked"/>
+            <Button Text="Transaksi" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="200" HeightRequest="60" BackgroundColor="#4CAF50" TextColor="White" Clicked="OnTransaksiButtonClicked"/>
+        </StackLayout>
+        <Label x:Name="tvCopyright" Text="Copyright 2023 by GudangKu - Yugy" FontSize="12" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,16" TextColor="#808080" />
+    </StackLayout>
+
+</ContentPage>

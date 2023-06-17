@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GudangKu.LakukanTransaksi"
+             Title="Tambah Transaksi">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Nama Barang:" FontAttributes="Bold" />
+            <Label x:Name="id_barang_acuan" IsVisible="False"/>
+            <Picker x:Name="namaPicker" Title="Pilih Nama Barang" SelectedIndexChanged="NamaPicker_SelectedIndexChanged">
+            </Picker>
+
+            <Label Text="Jenis Transaksi:" FontAttributes="Bold" />
+            <Picker x:Name="jenisTransaksi" Title="Pilih Jenis Transaksi">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Pembelian</x:String>
+                        <x:String>Penjualan</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+            <Label Text="Jumlah Barang:" FontAttributes="Bold" />
+            <Entry x:Name="jumlahEntry" Placeholder="Masukkan Jumlah Barang" Keyboard="Numeric" TextChanged="OnEntryTextChanged" />
+            
+            <Button Text="Tambah" Clicked="TambahTransaksi"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

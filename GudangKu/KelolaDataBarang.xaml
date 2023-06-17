@@ -1,0 +1,57 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GudangKu.KelolaDataBarang"
+             Title="Kelola Data Barang">
+    <ContentPage.Content>
+        <StackLayout Margin="20,0,20,0">
+            <Label Text="Data Barang" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,10" />
+            <ScrollView>
+                <CollectionView x:Name="collectionView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Nama Barang:" FontAttributes="Bold" />
+                                    <Label Text="{Binding name}" Grid.Column="1" />
+                                </Grid>
+
+                                <Label Text="Deskripsi:" FontAttributes="Bold" />
+                                <Label Text="{Binding description}" />
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Jumlah Barang:" FontAttributes="Bold" />
+                                    <Label Text="{Binding quantity}" Grid.Column="1"/>
+                                </Grid>
+
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="Harga/Pcs: " FontAttributes="Bold" />
+                                    <Label Text="{Binding price, StringFormat='Rp. {0:#,0},-'}" Grid.Column="1"/>
+                                </Grid>
+                                <StackLayout Orientation="Horizontal">
+                                    <Button Text="Edit" BackgroundColor="Yellow" Clicked="EditDataBarang"/>
+                                    <Button Text="Hapus" BackgroundColor="Salmon" Clicked="HapusDataBarang"/>
+                                </StackLayout>
+                                <BoxView HeightRequest="1" BackgroundColor="LightGray" Margin="0,10" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

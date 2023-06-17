@@ -1,0 +1,22 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GudangKu.UbahBarang"
+             Title="Form Mengubah Data">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Nama Barang:" FontAttributes="Bold" />
+            <Entry x:Name="namaEntry" Placeholder="Masukkan Nama Barang" />
+
+            <Label Text="Deskripsi:" FontAttributes="Bold" />
+            <Entry x:Name="deskripsiEntry" Placeholder="Masukkan Deskripsi Barang" />
+
+            <Label Text="Jumlah Barang:" FontAttributes="Bold" />
+            <Entry x:Name="jumlahEntry" Placeholder="Masukkan Jumlah Barang" Keyboard="Numeric" />
+
+            <Label Text="Harga/Pcs:" FontAttributes="Bold" />
+            <Entry x:Name="hargaEntry" Placeholder="Masukkan Harga Per Pcs" Keyboard="Numeric" />
+
+            <Button Text="Simpan" Clicked="UbahButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

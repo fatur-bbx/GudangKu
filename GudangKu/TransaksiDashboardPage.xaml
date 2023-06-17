@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GudangKu.TransaksiDashboardPage"
+             Title="Dashboard Transaksi">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Vertical"  HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Button Text="Riwayat Transaksi" CornerRadius="5" WidthRequest="300" HeightRequest="70" BackgroundColor="LightGreen" BorderWidth="2" BorderColor="LightGray" Margin="10" Clicked="LihatDataTransaksiOnClick"/>
+                <Button Text="Lakukan Transaksi" CornerRadius="5" WidthRequest="300" HeightRequest="70" BackgroundColor="LightGreen" BorderWidth="2" BorderColor="LightGray" Margin="10" Clicked="LakukanTransaksiOnClick"/>
+            </StackLayout>
+            <Label x:Name="tvCopyright" Text="Copyright 2023 by GudangKu - Yugy" FontSize="12" HorizontalOptions="Center" VerticalOptions="End" Margin="0,0,0,16" TextColor="#808080" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
